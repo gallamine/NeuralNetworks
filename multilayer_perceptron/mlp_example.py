@@ -3,12 +3,12 @@ from multilayer_perceptron  import MultilayerPerceptronClassifier, MultilayerPer
 import numpy as np
 from matplotlib import pyplot as plt
 
-# contrive the exclusive or problem
+# contrive the "exclusive or" problem
 X = np.array([[0,0], [1,0], [0,1], [1,1]])
 y = np.array([0, 1, 1, 0])
 
 # MLP training performance
-mlp = MultilayerPerceptronClassifier(n_hidden = 5,max_iter = 200)
+mlp = MultilayerPerceptronClassifier(n_hidden = 5,max_iter = 200, alpha = 0.02)
 mlp.fit(X, y)
 
 print "Training Score = ", mlp.score(X,y)
